@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>React - Template</title>
+    <title>Sticky Note</title>
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
     <script src="../../js/react.min.js"></script>
     <script src="../../js/react-dom.min.js"></script>
     <script src="../../js/browser.min.js"></script>
@@ -13,10 +14,35 @@
     <div id="container"></div>
 
     <script type="text/babel">
+        var Comment = React.createClass({
+            edit: function(){
+            alert('Editing comment');
+        },
+            remove: function(){
+            alert('removing comment');
+        },
+        render: function(){
+            return (
+                <div className="commentContainer">
+                    <div className="commentText">{this.props.children}</div>
+                    <button onClick={this.edit} className="button-primary">Edit</button>
+                    <button onClick={this.remove} className="button-danger">Remove</button>
+                </div>
+                
+            );
+
+    }
+
+    });
+
         ReactDOM.render(
-            <h2>Welcome to React!</h2>,
-            document.getElementById('container')
-        );
+            <div className="board">
+                <Comment>hey now</Comment>
+                <Comment>hey now saeed</Comment>
+                <Comment>hey now navid</Comment>
+            </div>
+
+         ,document.getElementById('container'));
     </script>
 
 </body>
