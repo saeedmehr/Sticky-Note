@@ -18,7 +18,9 @@
                 getInitialState: function(){
                 return {checked: true}
             },
-
+            handleChecked: function(){
+               this.setState({checked: !this.state.checked}) 
+            },
             render : function(){
                 var msg;
                 if(this.state.checked){
@@ -28,7 +30,7 @@
                 }
                 return (
                         <div>
-                            <input type = "checkbox" defaultChecked={this.state.checked} />
+                            <input type = "checkbox" onChange={this.handleChecked} defaultChecked={this.state.checked} />
                             <h3>Checkbox is {msg}</h3>
                         </div>
                 );
