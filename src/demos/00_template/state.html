@@ -13,34 +13,9 @@
 
     <div id="container"></div>
 
-    <!-- <script type="text/babel">
-        var CheckBox = React.createClass({
-            getInitialState(): function(){
-                return {checked: true}
-            },
-
-            render : function(){
-                var msg;
-                if(this.state.checked){
-                    msg = 'Checked'
-                }else {
-                    msg = 'Unchecked'
-                }
-                return (
-                        <div>
-                            <input type = "checkbox" defaultChecked={this.state.checked} />
-                            <h3>Checkbox is {msg}</h3>
-                        </div>
-                );
-            }
-        });
-        ReactDom.render(<CheckBox/>, document.getElementById('container'));
-
-    </script>
-    -->
      <script type="text/babel">
-        var Saeid = React.createClass({
-                getInitialState(): function(){
+        var CheckBox = React.createClass({
+                getInitialState: function(){
                 return {checked: true}
             },
 
@@ -59,7 +34,7 @@
                 );
             }
         });
-        ReactDOM.render(<Saeid />, document.getElementById('container'));
+        ReactDOM.render(<CheckBox />, document.getElementById('container'));
     </script>
 </body>
 </html>
