@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sticky Note</title>
+    <title>State</title>
     <link rel="stylesheet" type="text/css" href="../../css/main.css">
     <script src="../../js/react.min.js"></script>
     <script src="../../js/react-dom.min.js"></script>
@@ -18,7 +18,7 @@
         var CheckBox = React.createClass({
 
             getInitialState(): function(){
-                returns {checked: true}
+                return {checked: true}
             },
 
             render : function(){
@@ -28,9 +28,15 @@
                 }else {
                     msg = 'Unchecked'
                 }
+                return (
+                        <div>
+                            <input type = "checkbox" />
+                            <h3>Checkbox is {msg}</h3>
+                        </div>
+                );
             }
         });
-        ReactDom.render(<div>test</div>, document.getElementById('container'));
+        ReactDom.render(CheckBox, document.getElementById('container'));
 
     </script>
        
