@@ -18,7 +18,7 @@
 
             getInitialState : function(){
                 return: {editing: false}
-            },
+        },
             edit: function(){
             this.setState({editing: true})
         },
@@ -29,7 +29,7 @@
             this.setState({editing: false})
         },
 
-        renderNormal: function(){
+         renderNormal: function(){
             return (
                 <div className="commentContainer">
                     <div className="commentText">{this.props.children}</div>
@@ -42,7 +42,7 @@
         renderForm: function(){
             return (
                 <div className="commentContainer">
-                    <textarea defaultValue = {this.props.children}></textarea>
+                     <textarea defaultValue = {this.props.children}></textarea> 
                     <button onClick={this.save} className="button-success">Save</button>
                     
                 </div>
